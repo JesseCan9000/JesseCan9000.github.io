@@ -3,43 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>App Legal Info</title>
+  <title>Gungala Studios</title>
   <style>
     body {
       font-family: sans-serif;
       background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
     }
 
     h1 {
       color: #333;
-      margin-bottom: 20px;
+      margin: 0 0 20px;
     }
 
-    a {
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 0 20px 40px;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    .app-card {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .app-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .app-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 20%;
+      margin-bottom: 12px;
+    }
+
+    .app-card a {
+      display: block;
+      color: #007BFF;
+      font-weight: bold;
       text-decoration: none;
-      color: white;
-      background-color: #007BFF;
-      padding: 12px 24px;
-      border-radius: 6px;
-      margin: 10px;
-      display: inline-block;
-      transition: background-color 0.2s ease;
+      font-size: 1.1em;
     }
 
-    a:hover {
-      background-color: #0056b3;
+    .app-card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: center;
+      padding: 20px;
+      background: #eaeaea;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #007BFF;
+      margin: 0 15px;
+      font-size: 1em;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>Gungala Studios</h1>
-  <a href="privacy_policy.html">Privacy Policy</a>
-  <a href="terms_and_conditions.html">Terms & Conditions</a>
+
+  <header>
+    <h1>Gungala Studios</h1>
+  </header>
+
+  <section class="app-grid">
+    <div class="app-card">
+      <a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank">
+        <img src="app_icon.png" alt="One Handed Solitaire" />
+        One Handed Solitaire
+      </a>
+    </div>
+    <!-- More app cards can be added here -->
+  </section>
+
+  <footer>
+    <a href="privacy_policy.html">Privacy Policy</a>
+    <a href="terms_and_conditions.html">Terms & Conditions</a>
+  </footer>
+
 </body>
 </html>
